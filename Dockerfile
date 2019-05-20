@@ -21,7 +21,7 @@ RUN apt install wget ca-certificates tightvncserver fluxbox xterm xautomation -q
 RUN apt clean
 RUN rm -rf /var/lib/apt/lists/*
 
-# IB Gateway
+# Trader Workstation
 USER docker
 RUN wget -q https://download2.interactivebrokers.com/installers/tws/$VERSION-standalone/tws-$VERSION-standalone-linux-x64.sh
 RUN chmod +x tws-$VERSION-standalone-linux-x64.sh && ./tws-$VERSION-standalone-linux-x64.sh -q && rm -f tws-$VERSION-standalone-linux-x64.sh
