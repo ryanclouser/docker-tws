@@ -17,7 +17,7 @@ WORKDIR /home/docker
 
 # Update
 RUN apt update && apt upgrade -qy && apt dist-upgrade -qy
-RUN apt install wget ca-certificates tightvncserver fluxbox xterm xautomation -qy
+RUN apt install wget ca-certificates tightvncserver fluxbox xterm xautomation default-jre -qy
 RUN apt clean
 RUN rm -rf /var/lib/apt/lists/*
 
